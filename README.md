@@ -3,8 +3,8 @@
 ## Install Traefik w/ KubernetesGateway provider 
 ```
 kubectl apply -f ./deploy/00_rbac.yaml
-kubectl apply -f https://raw.githubusercontent.com/xxradar/traefik_k8s_ingressrouter_learnings/2.0/00_traefik_crd.yaml #Traefik CRD
-kubectl apply -f ./deploy/01_crd.yaml #Gateway CRD
+kubectl apply -f ./deploy/01_crd_traefik.yaml   #Traefik CRD
+kubectl apply -f ./deploy/01_crd.yaml           #Gateway CRD alpha
 kubectl apply -f ./deploy/02_traefik.yaml
 ```
 ## Install the whoami demo app
