@@ -6,7 +6,9 @@ kubectl apply -f ./deploy/00_rbac.yaml
 kubectl apply -f https://raw.githubusercontent.com/xxradar/traefik_k8s_ingressrouter_learnings/2.0/00_traefik_crd.yaml #Traefik CRD
 kubectl apply -f ./deploy/01_crd.yaml #Gateway CRD
 kubectl apply -f ./deploy/02_traefik.yaml
-kubectl apply -f ./deploy/04_crd.yaml
+kubectl apply -f ./deploy/03_whoami.yaml
+kubectl apply -f ./deploy/04_gateway_api.yaml
+
 ```
 ## Verify install
 ```
