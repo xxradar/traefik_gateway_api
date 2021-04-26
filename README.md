@@ -15,7 +15,7 @@ kubectl apply -f ./deploy/03_whoami.yaml
 ## Define the gateway api resources
 Create a certificate
 ```
-openssl req -x509 -newkey rsa:2048 -keyout tls.key -out tls.crt -days 365 -nodes -subj "/CN=whoami"`
+openssl req -x509 -newkey rsa:2048 -keyout tls.key -out tls.crt -days 365 -nodes -subj "/CN=whoami"
 kubectl create secret tls mysecret --cert=./tls.crt --key=./tls.key
 ```
 ```
