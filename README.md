@@ -34,7 +34,9 @@ kubectl get httproutes
 ## Verify everything is working
 ```
 kubectl get svc traefik
-curl -kv -H "Host: whoami" https://127.0.0.1:32282/foo #Capture the TLS port 
+ .. capture the TLS port ...
+ 
+curl -kv -H "Host: whoami" https://127.0.0.1:32282/foo 
  .... working example ....
  
 curl -kv -H "Host: whoami" https://127.0.0.1:32282/ 
