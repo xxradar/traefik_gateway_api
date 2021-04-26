@@ -42,3 +42,7 @@ curl -kv -H "Host: whoami" https://127.0.0.1:32282/foo
 curl -kv -H "Host: whoami" https://127.0.0.1:32282/ 
 .... page not found ... no exact match ...
 ```
+
+![whoami](https://github.com/xxradar/traefik_gateway_api/raw/main/images/Screenshot 2021-04-26 at 10.56.49.png)
+![whoami](https://github.com/xxradar/traefik_gateway_api/raw/main/images/Screenshot%202021-04-26%20at%2010.51.17.png)
+
