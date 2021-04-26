@@ -1,18 +1,18 @@
-# traefik_gateway_api
+# Traefik_gateway_api
 
-## install Traefik w/ KubernetesGateway provide
+## Install Traefik w/ KubernetesGateway provide
 ```
 kubectl apply -f ./deploy/00_rbac.yaml
 kubectl apply -f https://raw.githubusercontent.com/xxradar/traefik_k8s_ingressrouter_learnings/2.0/00_traefik_crd.yaml #Traefik CRD
 kubectl apply -f ./deploy/01_crd.yaml #Gateway CRD
 kubectl apply -f ./deploy/02_traefik.yaml
 ```
-## install the whoami demo app
+## Install the whoami demo app
 ```
 kubectl apply -f ./deploy/03_whoami.yaml
 ```
 
-## define the gateway api resources
+## Define the gateway api resources
 Create a certificate
 ```
 openssl req -x509 -newkey rsa:2048 -keyout tls.key -out tls.crt -days 365 -nodes -subj "/CN=whoami"`
