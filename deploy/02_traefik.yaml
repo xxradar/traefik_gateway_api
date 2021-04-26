@@ -28,14 +28,20 @@ spec:
           args:
             - --entrypoints.web.address=:80
             - --entrypoints.websecure.address=:443
+            - --entrypoints.web.address=:8000
             - --experimental.kubernetesgateway
             - --providers.kubernetesgateway
+            - --api.insecure
+            - --certificatesresolvers.le.acme.email=le@dockerhack.me
+            - --certificatesresolvers.le.acme.storage=/cert/acme.json
+            - --certificatesResolvers.le.acme.httpChallenge.entryPoint=web  
           ports:
             - name: web
               containerPort: 80
             - name: websecure
               containerPort: 443
-
+            - name: admin
+              containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
@@ -53,4 +59,8 @@ spec:
       port: 443
       targetPort: websecure
       name: websecure
+    - protocol: TCP
+      port: 8000
+      targetPort: admin
+      name: admin
   type: NodePort
