@@ -26,6 +26,7 @@ kubectl apply -f ./deploy/04_gateway_api.yaml
 ```
 kubectl get crd | grep networking.x-k8s.io
 kubectl get po 
+kubectl logs traefik-xxxxxxx 
 kubectl get gateway
 kubectl get gatewayclasses
 kubectl get httproutes
