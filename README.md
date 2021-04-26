@@ -1,4 +1,4 @@
-# Traefik_gateway_api
+# A working Traefik Gateway Api example !
 
 ## Install Traefik w/ KubernetesGateway provide
 ```
