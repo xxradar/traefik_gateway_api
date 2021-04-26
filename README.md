@@ -1,6 +1,6 @@
 # A working Traefik Gateway Api example !
 
-## Install Traefik w/ KubernetesGateway provide
+## Install Traefik w/ KubernetesGateway provider 
 ```
 kubectl apply -f ./deploy/00_rbac.yaml
 kubectl apply -f https://raw.githubusercontent.com/xxradar/traefik_k8s_ingressrouter_learnings/2.0/00_traefik_crd.yaml #Traefik CRD
